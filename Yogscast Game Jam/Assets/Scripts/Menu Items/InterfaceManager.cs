@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 public class InterfaceManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject m_PlayerObject;
+    GameObject m_PlayerObject = null;
 
     [SerializeField]
-    Text m_HealthText;
+    Text m_HealthText = null;
 
     [SerializeField]
-    Text m_RoomCountText; 
+    Text m_RoomCountText = null; 
 
     // Start is called before the first frame update
     void Start()
