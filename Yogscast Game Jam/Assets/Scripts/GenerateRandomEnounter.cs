@@ -11,12 +11,14 @@ public class GenerateRandomEnounter : MonoBehaviour
     float m_fCurrentTimer = 0.0f; /*! < \var The current timer, to limit the amount of random numbers generated each frame.  */
 
     [SerializeField]
-    bool m_bStartFight = false;  /*! < \var This will tell other portins of the game thatit should begi the combat loop.  */ 
+    bool m_bStartFight = false;  /*! < \var This will tell other portins of the game thatit should begi the combat loop.  */
+
+    GameObject m_PlayerObject; 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_PlayerObject = GameObject.FindGameObjectWithTag("Player"); 
     }
 
     // Update is called once per frame
@@ -31,17 +33,22 @@ public class GenerateRandomEnounter : MonoBehaviour
             // Reset the timer to prevent multiple calls after the initial time limit. 
             m_fCurrentTimer = 0;
 
-            int l_iCurrRand = Random.Range(0, 100);
-
-            if(l_iCurrRand <= m_iRandomChance)
+            if (m_PlayerObject.GetComponent<Movement>() != null)
             {
-                // Debug.Log("Enemy Encounter");
+                if (m_PlayerObject.GetComponent<Movement>().m_GetIsMoving() == true)
+                {
+                    int l_iCurrRand = Random.Range(0, 100);
 
-                // This boolean lets the program know that the encounter should happen. 
+                    if (l_iCurrRand <= m_iRandomChance)
+                    {
+                        Debug.Log("Enemy Encounter");
 
-                m_bStartFight = true; 
+                        // This boolean lets the program know that the encounter should happen. 
+
+                        m_bStartFight = true;
+                    }
+                }
             }
-
         }
     }
 

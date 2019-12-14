@@ -5,7 +5,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
-    float m_fSpeed = 50f; /*! < \var The current speed value for the player. */ 
+    float m_fSpeed = 5f; /*! < \var The current speed value for the player. */
+
+    bool m_bIsMoving = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,24 @@ public class Movement : MonoBehaviour
 
         float l_fXTranslation = (Input.GetAxis("Horizontal") * m_fSpeed) * Time.deltaTime;
 
+        if((Input.GetAxis("Vertical") > 0 || Input.GetAxis("Vertical") < 0) || ((Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0)))
+        {
+            // Debug.Log("Moving");
+
+            m_bIsMoving = true;
+        }
+        else
+        {
+            m_bIsMoving = false;
+        }
+
         // Translates the player on the map. 
         transform.Translate(l_fXTranslation, l_fYTranslation, 0);
     }
+
+    public bool m_GetIsMoving()
+    {
+        return m_bIsMoving; 
+    }
+
 }
