@@ -11,7 +11,7 @@ public class GenerateRandomEnounter : MonoBehaviour
     float m_fCurrentTimer = 0.0f; /*! < \var The current timer, to limit the amount of random numbers generated each frame.  */
 
     [SerializeField]
-    bool m_bStartFight = false;  /*! < \var This will tell other portins of the game thatit should begi the combat loop.  */
+    bool m_bStartFight = true;  /*! < \var This will tell other portins of the game thatit should begi the combat loop.  */
 
     GameObject m_PlayerObject; 
 
@@ -24,30 +24,37 @@ public class GenerateRandomEnounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Uses the time since last frame to create a timer. 
-        m_fCurrentTimer += Time.deltaTime;
-
-        // After the timer has reached past a certain range geerate a random number.
-        if (m_fCurrentTimer >= 0.5f)
+        if (m_bStartFight == false)
         {
-            // Reset the timer to prevent multiple calls after the initial time limit. 
-            m_fCurrentTimer = 0;
+            // Uses the time since last frame to create a timer. 
+            m_fCurrentTimer += Time.deltaTime;
 
-            if (m_PlayerObject.GetComponent<Movement>() != null)
+            // After the timer has reached past a certain range geerate a random number.
+            if (m_fCurrentTimer >= 0.5f)
             {
-                if (m_PlayerObject.GetComponent<Movement>().m_GetIsMoving() == true)
+                // Reset the timer to prevent multiple calls after the initial time limit. 
+                m_fCurrentTimer = 0;
+
+                if (m_PlayerObject.GetComponent<Movement>() != null)
                 {
-                    int l_iCurrRand = Random.Range(0, 100);
-
-                    if (l_iCurrRand <= m_iRandomChance)
+                    if (m_PlayerObject.GetComponent<Movement>().m_GetIsMoving() == true)
                     {
-                        Debug.Log("Enemy Encounter");
+                        int l_iCurrRand = Random.Range(0, 100);
 
-                        // This boolean lets the program know that the encounter should happen. 
+                        if (l_iCurrRand <= m_iRandomChance)
+                        {
+                            Debug.Log("Enemy Encounter");
 
-                        m_bStartFight = true;
+                            // This boolean lets the program know that the encounter should happen. 
+
+                            m_bStartFight = true;
+                        }
                     }
                 }
+            }
+            else
+            {
+
             }
         }
     }
