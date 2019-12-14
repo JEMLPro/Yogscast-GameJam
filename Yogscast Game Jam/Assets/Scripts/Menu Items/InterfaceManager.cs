@@ -18,7 +18,7 @@ public class InterfaceManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        m_PlayerObject = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
