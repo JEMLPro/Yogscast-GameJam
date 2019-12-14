@@ -28,22 +28,22 @@ public class Stats : MonoBehaviour
         
     }
 
-    int m_GetHealth()
+    public int m_GetHealth()
     {
         return m_iHealth;
     }
 
-    int m_GetAttack()
+    public int m_GetAttack()
     {
         return m_iAttack;
     }
 
-    int m_GetDefence()
+    public int m_GetDefence()
     {
         return m_iDefence; 
     }
 
-    int m_GetEvade()
+    public int m_GetEvade()
     {
         return m_iEvade;
     }
