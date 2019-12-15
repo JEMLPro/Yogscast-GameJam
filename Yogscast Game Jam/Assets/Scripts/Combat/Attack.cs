@@ -5,14 +5,10 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [SerializeField]
-    const int m_iHeavyBonusDam = 5, m_iHeavyDebuff = -3;
+    const int m_iHeavyBonusDam = 5, m_iHeavyDebuff = -3; /*! < \var These are the bonuses/debuffs for the heavy attack option. */
 
     [SerializeField]
-    const int m_iLightLessDam = -3, m_iLighthitChance = 3;
-
-    bool m_bLight = false;
-
-    bool m_bHeavy = false;
+    const int m_iLightLessDam = -3, m_iLighthitChance = 3; /*! < \var These are the bonuses/debuffs for the light attack option. */
 
     int m_bMadeDecision = -1;
 
@@ -40,19 +36,11 @@ public class Attack : MonoBehaviour
 
     public void m_MakeLight()
     {
-        m_bLight = true;
-
-        m_bHeavy = false;
-
         m_bMadeDecision = 0;
     }
 
     public void m_MakeHeavy()
     {
-        m_bLight = false;
-
-        m_bHeavy = true;
-
         m_bMadeDecision = 1;
     }
 
@@ -63,10 +51,6 @@ public class Attack : MonoBehaviour
 
     public void m_ResetBools()
     {
-        m_bHeavy = false;
-
-        m_bLight = false;
-
         m_bMadeDecision = -1;
     }
 

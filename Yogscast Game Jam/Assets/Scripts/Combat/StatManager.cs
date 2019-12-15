@@ -44,5 +44,10 @@ public class StatManager : MonoBehaviour
     void Update()
     {
         m_HealthText.SetText("Health " + m_PlayerObject.GetComponent<Stats>().m_GetHealth().ToString());
+
+        if (m_NameText != null) 
+        {
+            m_NameText.SetText(m_PlayerObject.GetComponent<Stats>().m_GetName());
+        }
     }
 }

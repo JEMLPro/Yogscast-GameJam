@@ -20,7 +20,10 @@ public class Stats : MonoBehaviour
     int m_iEvade = 5; /*! \var The evade stat for the entity, their chance to avoid all incoming damage. */
 
     [SerializeField]
-    string m_CurrName = "Placeholder"; 
+    string m_CurrName = "Placeholder";
+
+    [SerializeField]
+    GameObject m_UpdateChecker; 
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +34,13 @@ public class Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(m_UpdateChecker != null)
+        {
+            if(m_UpdateChecker.GetComponent<Stats>().m_GetHealth() != m_iHealth)
+            {
+                m_iHealth = m_UpdateChecker.GetComponent<Stats>().m_GetHealth();
+            }
+        }
     }
 
     public void m_SetHealth(int newHealth)

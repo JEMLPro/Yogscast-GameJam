@@ -5,20 +5,29 @@ using UnityEngine;
 public class GenerateRandomEnounter : MonoBehaviour
 {
     [SerializeField]
-    const int m_iRandomChance = 5; /*! < \var The chance for a randomencounter to occur, it is betewwn 0 and this int value. */
+    const int m_iRandomChance = 15; /*! < \var The chance for a randomencounter to occur, it is betewwn 0 and this int value. */
 
     [SerializeField]
     float m_fCurrentTimer = 0.0f; /*! < \var The current timer, to limit the amount of random numbers generated each frame.  */
 
     [SerializeField]
-    bool m_bStartFight = true;  /*! < \var This will tell other portins of the game thatit should begi the combat loop.  */
+    bool m_bStartFight = false;  /*! < \var This will tell other portins of the game thatit should begi the combat loop.  */
 
+    [SerializeField]
+    GameObject m_CombatScreen;
+
+    [SerializeField]
+    GameObject m_MainGameplayLoop;
+
+    [SerializeField]
     GameObject m_PlayerObject; 
 
     // Start is called before the first frame update
     void Start()
     {
-        m_PlayerObject = GameObject.FindGameObjectWithTag("Player"); 
+        m_PlayerObject = GameObject.FindGameObjectWithTag("Player");
+
+        m_bStartFight = false; 
     }
 
     // Update is called once per frame
@@ -48,19 +57,26 @@ public class GenerateRandomEnounter : MonoBehaviour
                             // This boolean lets the program know that the encounter should happen. 
 
                             m_bStartFight = true;
+
+                            m_CombatScreen.SetActive(true);
+
+                            m_MainGameplayLoop.SetActive(false); 
+
+
                         }
                     }
                 }
             }
-            else
-            {
-
-            }
         }
     }
 
-    bool CheckEncounterValue()
+    public bool CheckEncounterValue()
     {
         return m_bStartFight; 
+    }
+
+    public void m_EndFight()
+    {
+        m_bStartFight = false; 
     }
 }
