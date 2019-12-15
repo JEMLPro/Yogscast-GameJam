@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 151867626144588027}
   - component: {fileID: 4588922952853218108}
   - component: {fileID: 1468267338165862930}
+  - component: {fileID: 428438846}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Purp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +50,7 @@ MonoBehaviour:
   m_iHit: 8
   m_iDefence: 4
   m_iEvade: 6
-  m_CurrName: Purp
+  m_CurrName: Purple
   m_UpdateChecker: {fileID: 0}
 --- !u!212 &1468267338165862930
 SpriteRenderer:
@@ -100,3 +101,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &428438846
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088412971776877625}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b56b7c3f8c628e48b63ec485270c1b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
