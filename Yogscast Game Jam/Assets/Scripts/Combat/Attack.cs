@@ -12,15 +12,23 @@ public class Attack : MonoBehaviour
 
     int m_bMadeDecision = -1;
 
+    public int m_iCurrentAttackValue;
+
+    public int m_iCurrentDiceValue;
+
     public int m_Attack(int attackType, int attackValue, int hitChance, int hitDice)
     {
         int l_iDamage = 0;
 
-        if(attackType == 1) // < Heavy Attack 
+        m_iCurrentDiceValue = hitDice; 
+
+        if (attackType == 1) // < Heavy Attack 
         {
             if(hitDice - m_iHeavyDebuff >= hitChance)
             {
                 l_iDamage = attackValue + m_iHeavyBonusDam;
+
+                m_iCurrentAttackValue = l_iDamage;
             }
         }
         else // < Light attack 
@@ -28,6 +36,8 @@ public class Attack : MonoBehaviour
             if (hitDice + m_iLighthitChance >= hitChance)
             {
                 l_iDamage = attackValue - m_iLightLessDam;
+
+                m_iCurrentAttackValue = l_iDamage;
             }
         }
 

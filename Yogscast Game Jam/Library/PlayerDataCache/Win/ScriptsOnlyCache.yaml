@@ -13,11 +13,13 @@ ScriptsOnlyBuild:
     - MainMenu
     - ManageBattle
     - Movement
+    - PlaySounds
     - RandGenerator
     - ReachedExit
     - Spawning
     - StatManager
     - Stats
+    - UpdateDisplay
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -68,6 +70,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -122,6 +128,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11602}
     - Class: 114
       Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 16098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -163,6 +171,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -217,6 +229,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11602}
     - Class: 114
       Script: {instanceID: 11614}
+    - Class: 114
+      Script: {instanceID: 16098}
+    - Class: 114
+      Script: {instanceID: 24812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -555,7 +571,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: b53cba0334c6281d0b57a39e676eb2b3
+      Hash: d0f3a6e1a84ace9aee7a9af1405a01b6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Defend
@@ -705,7 +721,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 85f8361ffa999e0f4a53a752ade2a23d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Attack
@@ -1009,6 +1025,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: bab1459a18199109e9f96fb49672b9cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlaySounds
+  - hash:
+      serializedVersion: 2
+      Hash: 373c4c4785eaa9953ecb4b871696d2be
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpdateDisplay
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

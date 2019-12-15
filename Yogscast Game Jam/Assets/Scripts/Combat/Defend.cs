@@ -5,11 +5,17 @@ using UnityEngine;
 public class Defend : MonoBehaviour
 {
     [SerializeField]
-    int m_bMadeDecision = -1; /*! < \var This will be used to determine which action has been taken. */ 
+    int m_bMadeDecision = -1; /*! < \var This will be used to determine which action has been taken. */
+
+    public int m_iCurrentDamageValue;
+
+    public int m_iCurrentDiceValue;
 
     public int m_Defend(int defendType, int attackValue, int blockOrEvade, int hitDice)
     {
         int l_iDamage = attackValue; // The amount of incoming damage the opponent has dealt.
+
+        m_iCurrentDiceValue = hitDice; 
 
         if (defendType == 1) // < Block
         {
@@ -29,6 +35,8 @@ public class Defend : MonoBehaviour
                 l_iDamage = 0;
             }
         }
+
+        m_iCurrentDamageValue = l_iDamage;
 
         // The adjusted damage value. 
         return l_iDamage;
