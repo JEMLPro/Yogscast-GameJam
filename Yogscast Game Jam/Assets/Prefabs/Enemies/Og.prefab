@@ -96,7 +96,7 @@ MonoBehaviour:
   m_iHealth: 150
   m_iAttack: 10
   m_iHit: 5
-  m_iDefence: 7
+  m_iDefence: 5
   m_iEvade: 1
   m_CurrName: Ogre
   m_UpdateChecker: {fileID: 0}
