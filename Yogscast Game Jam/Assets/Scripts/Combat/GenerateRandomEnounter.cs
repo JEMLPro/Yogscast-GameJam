@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenerateRandomEnounter : MonoBehaviour
 {
     [SerializeField]
-    const int m_iRandomChance = 15; /*! < \var The chance for a randomencounter to occur, it is betewwn 0 and this int value. */
+    int m_iRandomChance = 15; /*! < \var The chance for a randomencounter to occur, it is betewwn 0 and this int value. */
 
     [SerializeField]
     float m_fCurrentTimer = 0.0f; /*! < \var The current timer, to limit the amount of random numbers generated each frame.  */

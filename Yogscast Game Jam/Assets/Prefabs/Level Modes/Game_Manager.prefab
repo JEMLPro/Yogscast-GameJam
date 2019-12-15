@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1532650900888140036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532650900888140038}
+  - component: {fileID: 1532650900888140039}
+  - component: {fileID: 1532650900888140033}
+  m_Layer: 0
+  m_Name: Game_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1532650900888140038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532650900888140036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3193909, y: 3.8260283, z: -0.9424667}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1532650900888140039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532650900888140036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e471f5bce46d00c429c1616295d9e0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fCurrentTimer: 0
+  m_bStartFight: 0
+  m_CombatScreen: {fileID: 0}
+  m_MainGameplayLoop: {fileID: 0}
+  m_PlayerObject: {fileID: 0}
+--- !u!114 &1532650900888140033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532650900888140036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb9cf7c44d6a524f8d037876c58488a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_iHealth: 100
+  m_iAttack: 5
+  m_iHit: 10
+  m_iDefence: 5
+  m_iEvade: 5
+  m_CurrName: Placeholder
+  m_UpdateChecker: {fileID: 0}
