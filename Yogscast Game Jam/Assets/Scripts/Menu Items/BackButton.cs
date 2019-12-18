@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class BackButton : MonoBehaviour
 {
-    public void m_ExitGame()
+    /*! \fn Used to load the main menu scene. */
+    public void m_ExitGame() 
     {
         SceneManager.LoadScene(0);
     }

@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 public class InterfaceManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject m_PlayerObject = null;
+    GameObject m_PlayerObject = null; /*! \var The player object, used to display their health. */
 
     [SerializeField]
-    Text m_HealthText = null;
+    Text m_HealthText = null; /*! \var The text for the player's health. */
 
     [SerializeField]
-    Text m_RoomCountText = null; 
+    Text m_RoomCountText = null; /*! \var The room count. */
 
     // Start is called before the first frame update
     void Start()

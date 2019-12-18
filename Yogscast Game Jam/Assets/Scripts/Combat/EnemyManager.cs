@@ -5,25 +5,15 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField]
-    List<GameObject> v_ListOfEnemies; 
+    List<GameObject> v_ListOfEnemies; /*! \var This will hold a list of enemies within the game. */
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /*! \fn This will allow for the adding of enemies into the list during gameplay. */ 
     void m_AddEnemy(GameObject newEnemy)
     {
         v_ListOfEnemies.Add(newEnemy);
     }
 
+    /*! \fn THis will return a random enemy object from the list. */
     public GameObject m_GetEnemyObject()
     {
         int l_iRand = Random.Range(0, v_ListOfEnemies.Count);

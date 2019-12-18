@@ -11,7 +11,7 @@ public class Stats : MonoBehaviour
     int m_iAttack = 5; /*! < \var The attack stat for the entity the damage they will deal if they hit the opponent. */
 
     [SerializeField]
-    int m_iHit = 10;
+    int m_iHit = 10; /*! < \var The current hit chance. */
 
     [SerializeField]
     int m_iDefence = 5; /*! \var The defence stat for the entity. the chance the have to take reduced damage from the attack. */ 
@@ -20,16 +20,10 @@ public class Stats : MonoBehaviour
     int m_iEvade = 5; /*! \var The evade stat for the entity, their chance to avoid all incoming damage. */
 
     [SerializeField]
-    string m_CurrName = "Placeholder";
+    string m_CurrName = "Placeholder"; /*! < \var The name for the object, used for enemies. */
 
     [SerializeField]
-    GameObject m_UpdateChecker; 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    GameObject m_UpdateChecker;  /*! < \var Used to update the current stats between the combat and the battle phases. */
 
     // Update is called once per frame
     void Update()

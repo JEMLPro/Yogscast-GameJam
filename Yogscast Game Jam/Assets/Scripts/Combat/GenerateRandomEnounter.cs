@@ -52,7 +52,7 @@ public class GenerateRandomEnounter : MonoBehaviour
 
                         if (l_iCurrRand <= m_iRandomChance)
                         {
-                            Debug.Log("Enemy Encounter");
+                            // Debug.Log("Enemy Encounter");
 
                             // This boolean lets the program know that the encounter should happen. 
 
@@ -70,11 +70,13 @@ public class GenerateRandomEnounter : MonoBehaviour
         }
     }
 
+    /*! \fn This will see if the combat screen should be activated. */
     public bool CheckEncounterValue()
     {
         return m_bStartFight; 
     }
 
+    /*! \fn This is used to check if the combat is resolved. */
     public void m_EndFight()
     {
         m_bStartFight = false; 

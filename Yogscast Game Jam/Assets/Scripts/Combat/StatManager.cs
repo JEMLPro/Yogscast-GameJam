@@ -6,23 +6,23 @@ using UnityEngine.UI;
 public class StatManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject m_PlayerObject;
+    GameObject m_PlayerObject; /*! < \var The Current player object, Has all of their stats. */
 
     [SerializeField]
-    TMPro.TMP_Text m_HealthText;
+    TMPro.TMP_Text m_HealthText; /*! < \var The Health Text on the screen. */
 
     [SerializeField]
-    TMPro.TMP_Text m_AttackText;
+    TMPro.TMP_Text m_AttackText; /*! < \var The Attack text on the screen. */
 
     [SerializeField]
-    TMPro.TMP_Text m_DodgeText;
+    TMPro.TMP_Text m_DodgeText; /*! < \var The Dodge text on the screen. */
 
     [SerializeField]
-    TMPro.TMP_Text m_BlockText;
+    TMPro.TMP_Text m_BlockText; /*! < \var The Block text on the screen. */
 
     [SerializeField]
-    TMPro.TMP_Text m_NameText; 
- 
+    TMPro.TMP_Text m_NameText; /*! < \var The Name text on the screen. */
+
     // Start is called before the first frame update
     void Start()
     {

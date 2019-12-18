@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class GenerateEnemy : MonoBehaviour
 {
     [SerializeField]
-    GameObject m_GameManager;
+    GameObject m_GameManager; /*! \var This will be the current game manager, this will tell the game what mode it's in.*/
 
     [SerializeField]
-    GameObject m_EnemySprite;
+    GameObject m_EnemySprite; /*! \var This will be the current enemy sprite. */ 
 
     [SerializeField]
-    GameObject m_EnemyStats; 
+    GameObject m_EnemyStats; /*! \var This will hold the current enemies stats. */ 
 
     bool m_SpawnOne = false; 
 

@@ -50,7 +50,7 @@ public class Defend : MonoBehaviour
 
     public void m_MakeBlock()
     {
-        m_bMadeDecision = 1; // If his is == 1 it is a dodge.
+        m_bMadeDecision = 1; // If his is == 1 it is a block.
     }
 
     public int m_MadeDecision()
